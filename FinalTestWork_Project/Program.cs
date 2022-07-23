@@ -15,6 +15,7 @@ string[] UserArrayElementsWithLt3Symbols(string[] userArray)
         {
             subresultArray[j] = userArray[i];
             j = j + 1;
+            i = i + 1;
         }
     }
     string[] resultArray = new string[j];
@@ -34,14 +35,22 @@ void PrintArray(string[] someArray)
         Console.Write($"{someArray[i]}, ");
         if (i + 1 == someArray.Length - 1)
         {
-            Console.Write($"{someArray[i]}, ");
+            Console.Write($"{someArray[i + 1]}");
             break;
         }
     }
+    Console.WriteLine();
 }
 
-string[] userArray1 = { };
-string[] userArray2 = { };
-string[] userArray3 = { };
-string[] userArray4 = { };
+string[] userArray1 = { "hello", "2", "world", ":-)" };
+string[] userArray2 = { "1234", "1567", "-2", "computer science" };
+string[] userArray3 = { "Russia", "Denmark", "Kazan" };
 
+PrintArray(userArray1);
+PrintArray(UserArrayElementsWithLt3Symbols(userArray1));
+
+PrintArray(userArray2);
+PrintArray(UserArrayElementsWithLt3Symbols(userArray2));
+
+PrintArray(userArray3);
+PrintArray(UserArrayElementsWithLt3Symbols(userArray3));

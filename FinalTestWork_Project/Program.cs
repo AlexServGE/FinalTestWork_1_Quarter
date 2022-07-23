@@ -17,6 +17,12 @@ string[] UserArrayElementsWithLt3Symbols(string[] userArray)
             j = j + 1;
         }
     }
-    string [] resultArray = new string[j];
+    string[] resultArray = new string[j];
+    i = 0;
+    while (i < j)
+    {
+        resultArray[i] = subresultArray[i];
+        i = i + 1;
+    }
     return resultArray;
 }

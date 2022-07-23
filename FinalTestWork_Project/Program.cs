@@ -30,13 +30,21 @@ string[] UserArrayElementsWithLt3Symbols(string[] userArray)
 
 void PrintArray(string[] someArray)
 {
-    for (int i = 0; i < someArray.Length; i = i + 1)
+    if (someArray.Length == 1)
     {
-        Console.Write($"{someArray[i]}, ");
-        if (i + 1 == someArray.Length - 1)
+        Console.Write(someArray[0]);
+    }
+    else
+    {
+        for (int i = 0; i < someArray.Length; i = i + 1)
         {
-            Console.Write($"{someArray[i + 1]}");
-            break;
+
+            Console.Write($"{someArray[i]}, ");
+            if (i + 1 == someArray.Length - 1)
+            {
+                Console.Write($"{someArray[i + 1]}");
+                break;
+            }
         }
     }
     Console.WriteLine();
